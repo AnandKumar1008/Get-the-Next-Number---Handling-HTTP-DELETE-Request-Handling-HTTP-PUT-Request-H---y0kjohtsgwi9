@@ -12,7 +12,7 @@ app.get("/api/get-next-num", (req, res) => {
   console.log(req.body.num);
   const num = req.body.num;
   if (typeof num === "number") {
-    res.status(200).json({ message: 11, status: "success" });
+    res.status(200).json({ message: num + 1, status: "success" });
   } else {
     res.status(400).json({ status: "failure" });
   }
